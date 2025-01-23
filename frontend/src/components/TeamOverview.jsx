@@ -56,7 +56,7 @@ const TeamMembers = [
 
 const TeamOverview = () => {
   return (
-    <div className="py-32 border flex justify-center  border-black bg-gray-100 dark:bg-darkmode ">
+    <div className="py-32  flex justify-center   bg-gray-100 dark:bg-darkmode ">
     <div className="container  px-4 md:px-6">
       <div className="text-center mb-12 ">
         <h2 className="text-4xl font-bold tracking-tighter sm:text-4xl md:text-5xl dark:text-white">Meet Our Team</h2>

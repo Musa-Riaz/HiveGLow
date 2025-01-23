@@ -8,7 +8,7 @@ const TeamCards = ({member}) => {
               className="overflow-hidden bg-white dark:bg-gray-800 transition-transform hover:scale-105"
             >
               <div className="aspect-square"> 
-                <img src={member.image || "/vite.svg"} alt={member.name}  className="object-cover " />
+                <img src={member.image || "/vite.svg"} alt={member.name}  className="object-cover  " />
               </div>
               <CardContent className="p-6">
                 <h3 className="text-xl font-bold dark:text-white">{member.name}</h3>

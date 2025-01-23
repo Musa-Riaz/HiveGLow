@@ -4,6 +4,7 @@ import Hero from "@/components/Hero";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import TeamOverview from "@/components/TeamOverview";
+import Contact from "@/components/Contact";
 const MainPage = () => {
   return (
     <Layout>
@@ -15,6 +16,9 @@ const MainPage = () => {
       </div>
       <div >
         <TeamOverview />
+      </div>
+      <div>
+        <Contact />
       </div>
       <Footer />
     </Layout>
