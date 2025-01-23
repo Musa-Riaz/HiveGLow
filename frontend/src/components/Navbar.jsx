@@ -1,6 +1,7 @@
 import React from "react";
 import useScrollTop from "../../hooks/useScrollTop";
 import { cn } from "../lib/utils";
+import {Link} from "react-scroll"
 import { ModeToggle } from "./mode-toggle";
 const Navbar = () => {
   const scrolled = useScrollTop();
@@ -16,11 +17,12 @@ const Navbar = () => {
 className="md:ml-auto md:justify-end justify-between w-full flex items-center gap-x-2"
 >
   <ul className="dark:text-white flex space-x-10">
-    <a href="#"><li>About Us</li></a>
-    <a href="#"><li>Services</li></a>
-    <a href="#"><li>Portfolio</li></a>
-    <a href="#"><li>Testimonials</li></a>
-    <a href="#"><li>Contact Us</li></a>
+    <li><Link to="home" smooth={true} duration={500} className="cursor-pointer hover:underline">Home</Link></li>
+    <li><Link to="about" smooth={true} duration={500} className="cursor-pointer hover:underline">About Us</Link></li>
+    <li><Link to="services" smooth={true} duration={500} className="cursor-pointer hover:underline">Services</Link></li>
+    <li><Link to="projects" smooth={true} duration={500} className="cursor-pointer hover:underline">Projects</Link></li>
+    <li><Link to="team" smooth={true} duration={500} className="cursor-pointer hover:underline">Team</Link></li>
+    <li><Link to="contact" smooth={true} duration={500} className="cursor-pointer hover:underline">Contact</Link></li>
   </ul>
 <ModeToggle />
 </div>

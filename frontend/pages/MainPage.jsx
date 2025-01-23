@@ -15,16 +15,23 @@ const MainPage = () => {
       <div className="z-50  bg-background  bg-opacity-80  dark:bg-[#282323]  fixed top-0 flex items-center w-full     ">
         <Navbar />
       </div>
-      <div className="flex flex-col items-center text-center gap-y-8 flex-1 min-h-screen px-6 pb-10 bg-gradient-to-r from-yellow-300 to-fuchsia-400 ">
+      <div id="home" className="flex flex-col items-center text-center gap-y-8 flex-1 min-h-screen px-6 pb-10 bg-gradient-to-r from-yellow-300 to-fuchsia-400 ">
         <Hero />
       </div>
+      <div id="about">
         <About />
-				<Services />
-				<ProjectSection />
-      <div >
+      </div>
+      <div id="services">
+        <Services />
+      </div>
+      <div id="projects">
+        <ProjectSection />
+      </div>
+
+      <div id="team">
         <TeamOverview />
       </div>
-      <div>
+      <div id="contact">
         <Contact />
       </div>
       <Footer />
