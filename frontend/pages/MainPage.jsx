@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import About from "@/components/About";
 import Services from "@/components/Services";
+import ProjectSection from "@/components/ProjectSection";
 
 const MainPage = () => {
 	return (
@@ -19,6 +20,7 @@ const MainPage = () => {
 				<Hero />
 				<About />
 				<Services />
+				<ProjectSection />
 			</div>
 			<Footer />
 		</Layout >
