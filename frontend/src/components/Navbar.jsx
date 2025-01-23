@@ -8,14 +8,21 @@ const Navbar = () => {
   return (
     <div
       className={cn(
-        "z-index bg-background dark:bg-[#282323] fixed top-0 flex items-center w-full p-6 border-b   ",
+        "z-50  bg-background bg-opacity-80  dark:bg-[#282323]  fixed top-0 flex items-center w-full p-6    ",
         scrolled && " border-b shadow-sm"
       )}
     >
-<BellElectric size={24} className="dark:text-white" />
+<p className="w-full font-bold dark:text-white">Hive Glow</p>
 <div 
 className="md:ml-auto md:justify-end justify-between w-full flex items-center gap-x-2"
 >
+  <ul className="dark:text-white flex space-x-10">
+    <a href="#"><li>About Us</li></a>
+    <a href="#"><li>Services</li></a>
+    <a href="#"><li>Portfolio</li></a>
+    <a href="#"><li>Testimonials</li></a>
+    <a href="#"><li>Contact Us</li></a>
+  </ul>
 <ModeToggle />
 </div>
     </div>

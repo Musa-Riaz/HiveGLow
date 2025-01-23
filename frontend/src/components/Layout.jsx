@@ -1,11 +1,9 @@
 import React from "react";
-import Navbar from "./Navbar";
 
 const Layout = ({ children }) => {
   return (
-    <div className='h-full   dark:bg-[#282323]'>
-    <Navbar />
-  <main className='h-[100vh] pt-40 '>
+    <div className='h-full dark:bg-[#282323]'>
+  <main className='min-h-screen flex flex-col pt-20 '>
     {children}
   </main>
 </div>
