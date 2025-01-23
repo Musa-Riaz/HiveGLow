@@ -1,11 +1,11 @@
 import React from 'react'
 import Heading from './Heading'
-import { Scroll } from 'lucide-react'
+
 const Hero = () => {
   return (
-    <div className='flex flex-col  h-full items-center justify-center max-w-5xl pt-20'>
+    <div className='flex flex-col h-[calc(100vh-64px)] items-center justify-center max-w-5xl'>
       <div className='flex items-center   '>
-          <Heading />
+        <Heading />
       </div>
     </div>
   )
