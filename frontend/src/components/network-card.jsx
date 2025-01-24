@@ -6,7 +6,7 @@ export function NetworkCard({ title, description, icon }) {
 
     return (
         <motion.div
-            className="relative hexagon p-8 group overflow-hidden rounded-lg bg-secondary"
+            className="relative p-8 group overflow-hidden rounded-lg bg-secondary"
             whileHover={{ scale: 1.02 }}
             onHoverStart={() => setIsHovered(true)}
             onHoverEnd={() => setIsHovered(false)}
@@ -31,7 +31,7 @@ export function NetworkCard({ title, description, icon }) {
 
             {/* Border glow effect */}
             <motion.div
-                className="absolute inset-0 border border-text blur-sm rounded-lg hexagon"
+                className="absolute inset-0 border border-text blur-sm rounded-lg"
                 initial={{ opacity: 0 }}
                 animate={{
                     opacity: isHovered ? 1 : 0,
