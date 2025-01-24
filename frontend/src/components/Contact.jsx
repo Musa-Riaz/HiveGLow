@@ -3,6 +3,7 @@ import { React, useRef, useState } from 'react'
 import { Input } from './ui/input'
 import { Button } from './ui/button'
 import { Textarea } from './ui/textarea'
+import { motion } from 'framer-motion'
 import emailjs from '@emailjs/browser'
 
 

@@ -5,8 +5,24 @@ import { Code2, Smartphone, Wrench, Laptop, Database, Cloud } from "lucide-react
 
 const Services = () => {
     return (
-        <section className="py-20 bg-background dark:bg-background text-text flex justify-center" >
-            <div className="container px-4">
+        <section className="py-20 bg-background dark:bg-background text-text flex justify-center ">
+                <div className='absolute left-0 transform -translate-y-1/2 z-0 opacity-30'>
+                <motion.img
+              src="/bee.png"
+              className=""
+              alt="Bee"
+              animate={{
+                y: [0, -10, 0], // Moves up and down
+                rotate: [0, 10, -10, 0], // Slight rotation
+              }}
+              transition={{
+                duration: 4, // Duration of the animation
+                repeat: Infinity, // Loops the animation
+                repeatType: "loop", // Smooth looping
+              }}
+            />
+                </div>
+            <div className="container px-4 ">
                 <motion.h2
                     className="text-4xl font-bold text-center mb-12"
                     initial={{ opacity: 0, y: 20 }}
