@@ -12,10 +12,14 @@ import ProjectSection from "@/components/ProjectSection";
 const MainPage = () => {
   return (
     <Layout>
-      <div className="z-50  bg-background  bg-opacity-80  dark:bg-[#282323]  fixed top-0 flex items-center w-full     ">
+      <div className="z-50  dark:bg-[#282323]  fixed top-0 flex items-center w-full ">
         <Navbar />
       </div>
-      <div id="home" className="flex flex-col items-center text-center gap-y-8 flex-1 min-h-screen px-6 pb-10 bg-gradient-to-r from-yellow-300 to-fuchsia-400 ">
+        <video src={"/herovid.mp4"} autoPlay loop muted  className="w-full h-screen object-cover z-0" />
+      <div
+        id="home"
+        className="w-full h-screen flex justify-center  backdrop-blur-sm absolute top-0 left-0 z-0"
+      >
         <Hero />
       </div>
       <div id="about">

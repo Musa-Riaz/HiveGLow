@@ -1,16 +1,55 @@
 import { Label } from '@radix-ui/react-dropdown-menu'
-import {React, useState} from 'react'
+import {React, useRef, useState} from 'react'
 import { Input } from './ui/input'
 import { Button } from './ui/button'
 import { Textarea } from './ui/textarea'
+import emailjs from '@emailjs/browser'
 
 
 const Contact = () => {
 
-    const [name, setName] = useState('')
-    const [email, setEmail] = useState('')
-    const [contact, setContact] = useState('')
+    const [user_name, setName] = useState('')
+    const [user_email, setEmail] = useState('')
+    const [user_contact, setContact] = useState('')
     const [message, setMessage] = useState('')
+    const [loading, setLoading] = useState(false)
+    const form = useRef();
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        try{
+            setLoading(true);
+            const formData = {
+                user_name,
+                user_email,
+                message,
+            };
+            emailjs
+            .send(
+              `${import.meta.env.VITE_service_id}`,
+              `${import.meta.env.VITE_template_id}`,
+                formData,
+              `${import.meta.env.VITE_public_key}`
+            )
+            .then(
+              () => {
+                setLoading(false);
+                alert("Message Sent Successfully");
+                setName("");
+                setEmail("");
+                setMessage("");
+              },
+              (error) => {
+                setLoading(false);
+                alert("Failed to send message");
+                console.log(error);
+              }
+            );
+        }
+        catch(err){
+            console.log(err);
+        }
+    }
 
   return (
     <div
@@ -28,19 +67,16 @@ const Contact = () => {
             </div>
 
             <div>
-                <form className='flex flex-col gap-4 bg-slate-200  w-[30vw] p-6 rounded-lg dark:bg-gray-800'>
+                <form className='flex flex-col gap-4 bg-slate-200  w-[30vw] p-6 rounded-lg dark:bg-gray-800' ref={form} onSubmit={handleSubmit}>
                     <div className='flex flex-col gap-4'>
                         <Label>Name</Label>
-                        <Input type='text' className="dark:bg-white text-black" placeholder= "Enter your name" value ={name} onChange={(e)=>setName(e.target.value)} />
+                        <Input type='text' className="dark:bg-white text-black" placeholder= "Enter your name" value ={user_name} onChange={(e)=>setName(e.target.value)} />
                     </div>
                     <div className='flex flex-col gap-4'>
                         <Label htmlFor='name'>Email</Label>
-                        <Input type='email' className="dark:bg-white text-black" placeholder="Enter your email" value={email} onChange = {(e) => setEmail(e.target.value)}  />
+                        <Input type='email' className="dark:bg-white text-black" placeholder="Enter your email" value={user_email} onChange = {(e) => setEmail(e.target.value)}  />
                     </div>
-                    <div className='flex flex-col gap-4'>
-                        <Label htmlFor='name'>Contact Number</Label>
-                        <Input type='text' className="dark:bg-white text-black" placeholder="Enter your contact number" value={contact} onChange={(e) => setContact(e.target.value)} />
-                    </div>
+                    
                     <div className='flex flex-col gap-4'>
                         <Label>Message</Label>
                         <Textarea  placeholder="Enter your message " 
@@ -48,7 +84,7 @@ const Contact = () => {
                         ></Textarea>
                     </div>
                     
-                    <Button type='submit'>Submit</Button>
+                    <Button type='submit'>{loading ? 'Sending...': 'Send Message'}</Button>
                 </form>
             </div>
         </div>

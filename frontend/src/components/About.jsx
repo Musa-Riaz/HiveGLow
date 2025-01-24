@@ -12,7 +12,7 @@ const About = () => {
     }
 
     return (
-        <section className="py-20 bg-gradient-to-b from-background to-secondary overflow-hidden">
+        <section className="py-20 bg-gradient-to-b dark:bg-darkmode text-white from-background to-secondary overflow-hidden">
             <div className="container px-4 mx-auto">
                 <motion.h2
                     className="text-4xl text-yellow-600 font-bold text-center mb-12 bg-gradient-to-r from-hive-primary to-hive-secondary bg-clip-text text-transparent"
@@ -23,7 +23,7 @@ const About = () => {
                     About HiveGlow
                 </motion.h2>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mb-12 min-h-[30vh]">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mb-12  min-h-[30vh]">
                     <motion.div
                         className="hexagon rounded-lg bg-yellow-600 p-6 flex flex-col justify-evenly items-center text-center"
                         variants={hexagonVariants}
@@ -31,7 +31,7 @@ const About = () => {
                         whileInView="visible"
                         viewport={{ once: true }}
                     >
-                        <h3 className="text-2xl font-semibold mb-4">Our Mission</h3>
+                        <h3 className="text-2xl  font-semibold mb-4">Our Mission</h3>
                         <p className="text-muted-foreground">
                             To illuminate the digital landscape with innovative solutions, fostering growth and efficiency for
                             businesses worldwide.

@@ -8,7 +8,7 @@ const Navbar = () => {
   return (
     <div
       className={cn(
-        "z-index  bg-background  bg-white dark:bg-[#282323]  fixed top-0 flex items-center w-full p-6    ",
+        "z-index   bg-white dark:bg-[#282323]  fixed top-0 flex items-center w-full p-6 px-6 ",
         scrolled && " border-b shadow-sm"
       )}
     >

@@ -45,11 +45,14 @@ const ProjectSlider = () => {
     };
 
     return (
-        <div className="h-screen w-3/4 flex justify-center">
+        <div className="h-screen w-3/4 flex flex-col justify-center items-center">
+            <h1 className="text-4xl font-bold text-yellow-600 text-center ">
+                Our Projects
+            </h1>
             <div className="mt-20 w-full">
-                <Slider {...settings}>
-                    {ServiceData.map((project) => (
-                        <div className="bg-yellow-600 flex flex-col items-center text-black h-[450px] rounded-lg p-5 hover:cursor-pointer">
+                <Slider {...settings}  >
+                    {ServiceData.map((project, index) => (
+                        <div key={index} className="bg-yellow-600 flex flex-col items-center text-white h-[450px] rounded-lg p-5 hover:cursor-pointer">
                             <div className="flex justify-center items-center pt-3">
                                 <img className="w-64 h-64 object-cover" src="https://static.vecteezy.com/system/resources/previews/003/808/879/non_2x/yellow-orange-beehive-background-honeycomb-bees-hive-cells-pattern-bee-honey-shapes-geometric-seamless-texture-symbol-hexagon-hexagonal-raster-mosaic-cell-sign-or-icon-gradation-color-vector.jpg" alt={project.title} />
                             </div>
