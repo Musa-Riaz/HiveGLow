@@ -5,10 +5,10 @@ import { Code2, Smartphone, Wrench, Laptop, Database, Cloud } from "lucide-react
 
 const Services = () => {
     return (
-        <section className="py-20 bg-slate-100 dark:bg-[#181818] flex justify-center" >
+        <section className="py-20 bg-background dark:bg-background text-text flex justify-center" >
             <div className="container px-4">
                 <motion.h2
-                    className="text-4xl font-bold text-center mb-12 text-yellow-600"
+                    className="text-4xl font-bold text-center mb-12"
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5 }}
@@ -20,32 +20,32 @@ const Services = () => {
                     <NetworkCard
                         title="Web Development"
                         description="Custom web solutions built with cutting-edge technologies"
-                        icon={<Code2 className="w-8 h-8 text-yellow-600" />}
+                        icon={<Code2 className="w-8 h-8" />}
                     />
                     <NetworkCard
                         title="Mobile Applications"
                         description="Native and cross-platform mobile app development"
-                        icon={<Smartphone className="w-8 h-8 text-yellow-600" />}
+                        icon={<Smartphone className="w-8 h-8" />}
                     />
                     <NetworkCard
                         title="Software Solutions"
                         description="Tailored software to meet your business needs"
-                        icon={<Laptop className="w-8 h-8 text-yellow-600" />}
+                        icon={<Laptop className="w-8 h-8" />}
                     />
                     <NetworkCard
                         title="Cloud Services"
                         description="Scalable cloud solutions for your growing business"
-                        icon={<Cloud className="w-8 h-8 text-yellow-600" />}
+                        icon={<Cloud className="w-8 h-8" />}
                     />
                     <NetworkCard
                         title="Database Management"
                         description="Efficient database design and optimization"
-                        icon={<Database className="w-8 h-8 text-yellow-600" />}
+                        icon={<Database className="w-8 h-8" />}
                     />
                     <NetworkCard
                         title="Maintenance & Support"
                         description="Ongoing technical support and maintenance"
-                        icon={<Wrench className="w-8 h-8 text-yellow-600" />}
+                        icon={<Wrench className="w-8 h-8" />}
                     />
                 </div>
             </div>

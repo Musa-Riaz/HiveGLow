@@ -4,8 +4,22 @@
 
 @layer base {
   :root {
-    --radius: 0.5rem
+    --radius: 0.5rem;
+    --text: #120e08;
+    --background: #f7f3ed;
+    --primary: #e9aa16;
+    --secondary: #dedede;
+    --accent: #e88102;
   }
+
+  .dark {
+    --text: #f7f3ed;
+    --background: #000000;
+    --primary: #e9aa16;
+    --secondary: #111111;
+    --accent: #fd9517;
+  }
+
 }
 
 .slick-slide>div {
