@@ -56,8 +56,8 @@ const Contact = () => {
     className='py-24 flex justify-center bg-white dark:bg-darkmode '
     >
         <div className='px-4 md:px-6 w-full flex flex-col items-center gap-10 md:flex-row justify-evenly dark:text-white '>
-            <div className='flex flex-col    gap-4 md:gap-10 '>
-                <h2 className='text-4xl font-bold  dark:text-white'>
+            <div className='flex flex-col  gap-4 md:gap-10 text-yellow-600'>
+                <h2 className='text-4xl font-bold  '>
                     Contact Us
                 </h2>
                 <h3 className=' w-[30vw]'><span className='text-xl font-bold'>Our Location<br/></span>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perferendis in soluta placeat. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, excepturi.</h3>

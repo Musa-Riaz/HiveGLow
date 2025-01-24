@@ -15,10 +15,8 @@ const MainPage = () => {
       <div className="z-50  dark:bg-[#282323]  fixed top-0 flex items-center w-full ">
         <Navbar />
       </div>
-        <video src={"/herovid.mp4"} autoPlay loop muted  className="w-full h-screen object-cover z-0" />
-      <div
-        id="home"
-        className="w-full h-screen flex justify-center  backdrop-blur-sm absolute top-0 left-0 z-0"
+      <div id="home" className="flex flex-col items-center text-center gap-y-8 flex-1 min-h-screen px-6 pb-10 "
+      style={{backgroundImage: "url('/hero2.jpg')", backgroundSize: "cover", backgroundPosition: "center"}}
       >
         <Hero />
       </div>

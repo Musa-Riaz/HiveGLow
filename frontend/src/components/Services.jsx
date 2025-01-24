@@ -5,7 +5,7 @@ import { Code2, Smartphone, Wrench, Laptop, Database, Cloud } from "lucide-react
 
 const Services = () => {
     return (
-        <section className="py-20 bg-slate-100 dark:bg-darkmode flex justify-center" >
+        <section className="py-20 bg-slate-100 dark:bg-[#181818] flex justify-center" >
             <div className="container px-4">
                 <motion.h2
                     className="text-4xl font-bold text-center mb-12 text-yellow-600"

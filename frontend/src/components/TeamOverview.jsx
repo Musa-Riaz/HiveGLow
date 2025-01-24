@@ -56,11 +56,11 @@ const TeamMembers = [
 
 const TeamOverview = () => {
   return (
-    <div className="py-32  flex justify-center   bg-gray-100 dark:bg-darkmode ">
+    <div className="py-32  flex justify-center   bg-gray-100 dark:bg-[#181818] ">
     <div className="container  px-4 md:px-6">
-      <div className="text-center mb-12 ">
-        <h2 className="text-4xl font-bold tracking-tighter sm:text-4xl md:text-5xl dark:text-white">Meet Our Team</h2>
-        <p className="mt-4 text-gray-500 dark:text-gray-400 md:text-xl">The talented people behind our success</p>
+      <div className="text-center mb-12 text-yellow-600 ">
+        <h2 className="text-4xl font-bold tracking-tighter sm:text-4xl md:text-5xl ">Meet Our Team</h2>
+        <p className="mt-4   md:text-xl">The talented people behind our success</p>
       </div>
 
       <div className="flex gap-4  mx-10  justify-center ">

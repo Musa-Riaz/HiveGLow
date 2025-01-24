@@ -13,7 +13,7 @@ export default {
   			sm: 'calc(var(--radius) - 4px)'
   		},
   		colors: {
-        darkmode:'#282323'
+        darkmode:'#111111'
       }
   	}
   },
