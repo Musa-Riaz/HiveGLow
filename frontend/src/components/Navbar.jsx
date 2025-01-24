@@ -8,8 +8,8 @@ const Navbar = () => {
     return (
         <div
             className={cn(
-                "z-index bg-background dark:bg-background fixed top-0 flex items-center w-full p-6 px-6 ",
-                scrolled && "shadow-md"
+                "z-index bg-background dark:bg-background fixed top-0 flex items-center  w-full p-4 px-6 ",
+                scrolled && "border-b border-yellow-600 shadow-md"
             )}
         >
             <p className="w-full font-bold text-text dark:text-text">Hive Glow</p>

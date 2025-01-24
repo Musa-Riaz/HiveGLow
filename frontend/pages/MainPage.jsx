@@ -12,14 +12,20 @@ import ProjectSection from "@/components/ProjectSection";
 const MainPage = () => {
   return (
     <Layout>
-      <div className="z-50  dark:bg-[#282323]  fixed top-0 flex items-center w-full ">
+      <div className="z-50  dark:bg-[#282323]  fixed top-0 flex items-center w-full  ">
         <Navbar />
       </div>
-      <div id="home" className="flex flex-col items-center text-center gap-y-8 flex-1 min-h-screen px-6 pb-10 "
-      style={{backgroundImage: "url('/hero2.jpg')", backgroundSize: "cover", backgroundPosition: "center"}}
-      >
-        <Hero />
-      </div>
+      <div
+  id="home"
+  className="relative flex flex-col items-center text-center gap-y-8 flex-1 min-h-screen px-6 pb-10"
+  style={{ backgroundImage: "url('/image.jpg')", backgroundSize: "cover", backgroundPosition: "center"}}
+>
+  <div className="absolute inset-0 bg-black opacity-80  z-0"></div>
+
+  <div className="relative z-10">
+    <Hero />
+  </div>
+</div>
       <div id="about">
         <About />
       </div>
