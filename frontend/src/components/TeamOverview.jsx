@@ -63,7 +63,7 @@ const TeamOverview = () => {
           <p className="mt-4   md:text-xl">The talented people behind our success</p>
         </div>
 
-        <div className="flex gap-4 mx-10 justify-center ">
+        <div className="flex flex-col md:flex-row gap-4 mx-10 justify-center ">
           {TeamMembers.map((member, index) => (
             <TeamCards key={index} member={member} />
           ))}

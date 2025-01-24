@@ -37,7 +37,7 @@ const ServiceData = [
 
 const ProjectSlider = () => {
 
-    var settings = {
+    const settings = {
         infinite: true,
         speed: 500,
         slidesToShow: 3,
@@ -50,7 +50,7 @@ const ProjectSlider = () => {
                 Our Projects
             </h1>
             <div className="mt-12 w-full">
-                <Slider {...settings}  >
+                <Slider {...settings} >
                     {ServiceData.map((project, index) => (
                         <div className="bg-primary flex flex-col items-center text-text dark:text-background h-[450px] rounded-lg hover:cursor-pointer overflow-hidden">
                             <div className="flex justify-center items-center">

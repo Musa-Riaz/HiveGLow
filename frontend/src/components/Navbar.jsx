@@ -14,6 +14,7 @@ const Navbar = () => {
                 scrolled && "bg-background transition-all duration-300 shadow-md"
             )}
         >
+            <img src="./logo.png" className="h-10 mr-3" />
             <p className="w-full font-bold text-text dark:text-text">Hive Glow</p>
             <div
                 className="md:ml-auto md:justify-end justify-between w-full flex items-center gap-x-2"
