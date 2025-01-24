@@ -103,10 +103,10 @@ const Services = () => {
 
     return (
         <section className="py-20 bg-background dark:bg-background text-text flex justify-center relative overflow-hidden">
-            <div className="absolute left-0 top-1/2 transform -translate-y-1/2 z-0 opacity-30">
+            <div className="absolute left-0 top-5 opacity-30">
                 <motion.img
                     src="/bee.png"
-                    className=""
+                    className="w-36 h-36"
                     alt="Bee"
                     animate={{
                         y: [0, -10, 0],

@@ -4,10 +4,10 @@ import { motion } from "framer-motion";
 const ProjectSection = () => {
     return (
         <>
-        <div className='absolute right-0 transform -translate-x-8 -translate-y-1/6 z-0 opacity-30'>
+        <div className='absolute right-0 transform -translate-x-8 -translate-y-1/3 z-0 opacity-30'>
         <motion.img
               src="/beer.png"
-              className=""
+              className="w-36 h-36"
               alt="Bee"
               animate={{
                 y: [0, -10, 0], // Moves up and down
@@ -23,10 +23,10 @@ const ProjectSection = () => {
         <div className="w-full flex flex-col justify-center items-center py-20 bg-secondary min-h-screen">
             <ProjectSlider />
         </div>
-        <div className='absolute left-0 transform -translate-y-56 z-0 opacity-30'>
+        <div className='absolute left-0 transform -translate-y-6 z-0 opacity-30'>
         <motion.img
               src="/bee.png"
-              className=""
+              className="w-36 h-36"
               alt="Bee"
               animate={{
                 y: [0, -10, 0], // Moves up and down
