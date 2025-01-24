@@ -79,7 +79,7 @@ const Navbar = () => {
                             to="contact"
                             smooth={true}
                             duration={500}
-                            className="cursor-pointer transition-colors hover:text-primary group pr-5"
+                            className="cursor-pointer transition-colors hover:text-primary group"
                         >
                             Contact
                             <AnimatedUnderline />
