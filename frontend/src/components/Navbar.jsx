@@ -9,7 +9,7 @@ const Navbar = () => {
         <div
             className={cn(
                 "z-index bg-transparent fixed top-0 flex items-center  w-full p-4 px-6 ",
-                scrolled && "border-b bg-background transition-all duration-300 border-yellow-600 shadow-md"
+                scrolled && "bg-background transition-all duration-300 shadow-md"
             )}
         >
             <p className="w-full font-bold text-text dark:text-text">Hive Glow</p>
