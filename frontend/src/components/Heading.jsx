@@ -9,7 +9,7 @@ const Heading = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8 }}
-            className="max-w-3xl text-background flex flex-col mt-20 gap-2 items-center dark:text-text space-y-4 mx-auto  "
+            className="max-w-3xl text-background flex flex-col mb-20 justify-center gap-2 items-center dark:text-text space-y-4 mx-auto  "
         >
             <h1 className="text-4xl sm:text-5xl md:text-8xl font-bold  min-w-max p-2 ">
                 Welcome To HiveGlow

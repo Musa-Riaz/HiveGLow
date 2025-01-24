@@ -17,12 +17,12 @@ const MainPage = () => {
       </div>
       <div
   id="home"
-  className="relative flex flex-col items-center text-center gap-y-8 flex-1 min-h-screen px-6 pb-10"
+  className="relative flex flex-col items-center justify-center text-center gap-y-8 flex-1 min-h-screen px-6 pb-10 "
   style={{ backgroundImage: "url('/image.jpg')", backgroundSize: "cover", backgroundPosition: "center"}}
 >
   <div className="absolute inset-0 bg-black opacity-80  z-0"></div>
 
-  <div className="relative z-10">
+  <div className="relative z-10 ">
     <Hero />
   </div>
 </div>
