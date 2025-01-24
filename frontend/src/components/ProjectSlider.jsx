@@ -52,12 +52,14 @@ const ProjectSlider = () => {
             <div className="mt-12 w-full">
                 <Slider {...settings}  >
                     {ServiceData.map((project, index) => (
-                        <div key={index} className="bg-primary flex flex-col items-center text-text dark:text-background h-[450px] rounded-lg p-7 hover:cursor-pointer">
+                        <div className="bg-primary flex flex-col items-center text-text dark:text-background h-[450px] rounded-lg hover:cursor-pointer overflow-hidden">
                             <div className="flex justify-center items-center">
-                                <img className="w-64 h-64 object-cover" src="https://static.vecteezy.com/system/resources/previews/003/808/879/non_2x/yellow-orange-beehive-background-honeycomb-bees-hive-cells-pattern-bee-honey-shapes-geometric-seamless-texture-symbol-hexagon-hexagonal-raster-mosaic-cell-sign-or-icon-gradation-color-vector.jpg" alt={project.title} />
+                                <img className="w-full h-64 object-cover" src="https://static.vecteezy.com/system/resources/previews/003/808/879/non_2x/yellow-orange-beehive-background-honeycomb-bees-hive-cells-pattern-bee-honey-shapes-geometric-seamless-texture-symbol-hexagon-hexagonal-raster-mosaic-cell-sign-or-icon-gradation-color-vector.jpg" alt={project.title} />
                             </div>
-                            <h1 className="text-3xl font-bold mt-4">{project.title}</h1>
-                            <p>{project.description}</p>
+                            <div key={index} className="p-7 pt-0">
+                                <h1 className="text-3xl font-bold mt-4">{project.title}</h1>
+                                <p>{project.description}</p>
+                            </div>
                         </div>
                     ))}
                 </Slider>

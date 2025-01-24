@@ -6,7 +6,7 @@ export function NetworkCard({ title, description, icon }) {
 
     return (
         <motion.div
-            className="relative p-8 group overflow-hidden rounded-lg bg-secondary"
+            className="hover:cursor-pointer relative p-6 group overflow-hidden rounded-lg bg-secondary h-52 flex flex-col justify-center"
             whileHover={{ scale: 1.02 }}
             onHoverStart={() => setIsHovered(true)}
             onHoverEnd={() => setIsHovered(false)}
@@ -15,7 +15,7 @@ export function NetworkCard({ title, description, icon }) {
             transition={{ duration: 0.5 }}
         >
             {/* Content */}
-            <div className="relative z-10 flex flex-col items-center text-center text-text space-y-4">
+            <div className="relative z-10 flex flex-col items-center text-center text-text space-y-2">
                 <motion.div
                     className="p-3 rounded-full"
                     animate={{
@@ -25,8 +25,8 @@ export function NetworkCard({ title, description, icon }) {
                 >
                     {icon}
                 </motion.div>
-                <h3 className="text-2xl font-semibold">{title}</h3>
-                <p className="text-muted-foreground">{description}</p>
+                <h3 className="text-lg font-semibold">{title}</h3>
+                <p className="text-sm text-muted-foreground leading-tight">{description}</p>
             </div>
 
             {/* Border glow effect */}

@@ -3,6 +3,8 @@ import useScrollTop from "../../hooks/useScrollTop";
 import { cn } from "../lib/utils";
 import { Link } from "react-scroll"
 import { ModeToggle } from "./mode-toggle";
+import AnimatedUnderline from "./AnimatedUnderline";
+
 const Navbar = () => {
     const scrolled = useScrollTop();
     return (
@@ -17,12 +19,72 @@ const Navbar = () => {
                 className="md:ml-auto md:justify-end justify-between w-full flex items-center gap-x-2"
             >
                 <ul className="text-text dark:text-text flex space-x-10">
-                    <li><Link to="home" smooth={true} duration={500} className="cursor-pointer hover:underline">Home</Link></li>
-                    <li><Link to="about" smooth={true} duration={500} className="cursor-pointer hover:underline">About Us</Link></li>
-                    <li><Link to="services" smooth={true} duration={500} className="cursor-pointer hover:underline">Services</Link></li>
-                    <li><Link to="projects" smooth={true} duration={500} className="cursor-pointer hover:underline">Projects</Link></li>
-                    <li><Link to="team" smooth={true} duration={500} className="cursor-pointer hover:underline">Team</Link></li>
-                    <li><Link to="contact" smooth={true} duration={500} className="pr-3 cursor-pointer hover:underline">Contact</Link></li>
+                    <li className="relative">
+                        <Link
+                            to="home"
+                            smooth={true}
+                            duration={500}
+                            className="cursor-pointer transition-colors hover:text-primary group"
+                        >
+                            Home
+                            <AnimatedUnderline />
+                        </Link>
+                    </li>
+                    <li className="relative">
+                        <Link
+                            to="about"
+                            smooth={true}
+                            duration={500}
+                            className="cursor-pointer transition-colors hover:text-primary group"
+                        >
+                            About
+                            <AnimatedUnderline />
+                        </Link>
+                    </li>
+                    <li className="relative">
+                        <Link
+                            to="services"
+                            smooth={true}
+                            duration={500}
+                            className="cursor-pointer transition-colors hover:text-primary group"
+                        >
+                            Services
+                            <AnimatedUnderline />
+                        </Link>
+                    </li>
+                    <li className="relative">
+                        <Link
+                            to="projects"
+                            smooth={true}
+                            duration={500}
+                            className="cursor-pointer transition-colors hover:text-primary group"
+                        >
+                            Projects
+                            <AnimatedUnderline />
+                        </Link>
+                    </li>
+                    <li className="relative">
+                        <Link
+                            to="team"
+                            smooth={true}
+                            duration={500}
+                            className="cursor-pointer transition-colors hover:text-primary group"
+                        >
+                            Team
+                            <AnimatedUnderline />
+                        </Link>
+                    </li>
+                    <li className="relative">
+                        <Link
+                            to="contact"
+                            smooth={true}
+                            duration={500}
+                            className="cursor-pointer transition-colors hover:text-primary group pr-5"
+                        >
+                            Contact
+                            <AnimatedUnderline />
+                        </Link>
+                    </li>
                 </ul>
                 <ModeToggle />
             </div>

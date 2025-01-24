@@ -5,7 +5,7 @@ import { Github, Linkedin, Twitter } from "lucide-react"
 const TeamCards = ({ member }) => {
   return (
     <Card
-      className="overflow-hidden bg-secondary border-none transition-transform hover:scale-105"
+      className="overflow-hidden bg-secondary border-none transition-transform hover:scale-105 hover:cursor-pointer"
     >
       <div className="aspect-square">
         <img src={member.image || "/vite.svg"} alt={member.name} className="object-cover  " />
