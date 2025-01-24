@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 const ProjectSection = () => {
     return (
         <>
-        <div className='absolute right-0 transform -translate-y-1/6 z-0 opacity-30'>
+        <div className='absolute right-0 transform -translate-x-8 -translate-y-1/6 z-0 opacity-30'>
         <motion.img
               src="/beer.png"
               className=""

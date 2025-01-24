@@ -74,7 +74,7 @@ const About = () => {
               </p>
             </div>
           </motion.div>
-          <div className="absolute right-0 transform -translate-y-48 z-0 opacity-30 animate-pulse">
+          <div className="absolute right-0 transform -translate-x-8 -translate-y-48 z-0 opacity-30 animate-pulse">
             <motion.img
               src="/beer.png"
               className=""
