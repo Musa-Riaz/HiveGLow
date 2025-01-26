@@ -1,5 +1,4 @@
-import { useState } from "react"
-import { useChat } from "ai/react"
+import { useState, useEffect, useRef } from "react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
@@ -9,7 +8,13 @@ import axios from "axios"
 
 export default function AIChatbot() {
     const [isOpen, setIsOpen] = useState(false)
-    const { messages, input, handleInputChange, handleSubmit } = useChat()
+    const [messages, setMessages] = useState([]) // Store messages here
+    const [input, setInput] = useState("") // Manage input
+    const scrollAreaRef = useRef(null)
+
+    const handleInputChange = (e) => {
+        setInput(e.target.value)
+    }
 
     const handleChatSubmit = (e) => {
         e.preventDefault()
@@ -18,21 +23,46 @@ export default function AIChatbot() {
             return
         }
 
-        handleSubmit(input)
-        // handleSubmit("Hello", "bot")
-        // axios.post("http://localhost:5000/chat", { message: input })
-        //     .then((res) => {
-        //         handleSubmit(res.data.message, "bot")
-        //     })
-        //     .catch((err) => {
-        //         console.error(err)
-        //     })
+        // Add user's message to the chat
+        setMessages((prevMessages) => [...prevMessages, { role: "user", content: input }])
 
+        // Send the user's message to the server
+        axios
+            .get("http://localhost:8000/api/chat", {
+                params: { message: input }, // Sending data as query parameters
+            })
+            .then((response) => {
+                console.log(response.data)
+
+                if (response.data.success === false) {
+                    console.error("There was an error fetching the response!")
+                    return
+                }
+
+                // Add bot's response to the chat
+                setMessages((prevMessages) => [...prevMessages, { role: "bot", content: response.data.message }])
+
+                // Clear the input field
+                setInput("")
+            })
+            .catch((error) => {
+                console.error("There was an error sending the message!", error)
+            })
     }
+
+    useEffect(() => {
+        // Scroll to the bottom whenever messages change
+        if (scrollAreaRef.current) {
+            scrollAreaRef.current.scrollTop = scrollAreaRef.current.scrollHeight
+        }
+    }, [scrollAreaRef])
 
     return (
         <>
-            <Button className="fixed bottom-4 h-10 w-10 right-4 rounded-full p-4 shadow-lg" onClick={() => setIsOpen(!isOpen)}>
+            <Button
+                className="fixed bottom-4 h-10 w-10 right-4 rounded-full p-4 shadow-lg"
+                onClick={() => setIsOpen(!isOpen)}
+            >
                 <Bot className="h-10 w-10" />
             </Button>
             {isOpen && (
@@ -44,11 +74,11 @@ export default function AIChatbot() {
                         </Button>
                     </CardHeader>
                     <CardContent>
-                        <ScrollArea className="h-60 w-full pr-4">
-                            {messages.map((m) => (
-                                <div key={m.id} className={`mb-4 ${m.role === "user" ? "text-right" : "text-left"}`}>
+                        <ScrollArea className="h-60 w-full pr-4" ref={scrollAreaRef}>
+                            {messages.map((m, index) => (
+                                <div key={index} className={`mb-4 ${m.role === "user" ? "text-right" : "text-left"}`}>
                                     <span
-                                        className={`inline-block p-2 rounded-lg ${m.role === "user" ? "bg-primary text-black" : "bg-muted"}`}
+                                        className={`inline-block p-2 rounded-lg ${m.role === "user" ? "bg-primary text-black" : "bg-text text-background"}`}
                                     >
                                         {m.content}
                                     </span>
@@ -71,7 +101,6 @@ export default function AIChatbot() {
                             >
                                 <Send className="h-5 w-5 text-black" />
                             </Button>
-
                         </form>
                     </CardFooter>
                 </Card>
