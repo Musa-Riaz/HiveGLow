@@ -19,7 +19,7 @@ const Heading = () => {
         high-quality software.
       </h3>
       <div className="flex  items-center w-full justify-center gap-2">
-        <div className="w-28 h-28  flex items-center justify-center z-0 opacity-30 hover:cursor-pointer hover:opacity-100 transition-all duration-300">
+        <div className="w-[80px] h-[80px] flex items-center justify-center z-0 opacity-30 hover:cursor-pointer hover:opacity-100 transition-all duration-300">
           <img src="/robo.png" />
         </div>
         <Link to="contact" smooth={true} duration={1000}>
